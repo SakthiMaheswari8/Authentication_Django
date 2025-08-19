@@ -94,7 +94,7 @@ def login(request):
         return JsonResponse({'error': 'Only POST method allowed','status id':'405'}, status=405)
 
 @csrf_exempt
-def validate_token(request):
+def Refresh_token(request):
     if request.method == 'POST':
         try:
             data = json.loads(request.body)
